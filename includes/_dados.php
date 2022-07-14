@@ -1,19 +1,36 @@
 <?php
-$produtos= array(0=> array('nome'=>'capivara','preco'=>' 16000','descricao'=>' Uma simples capivara','imagem'=>'capivara.png'),
-                 1=> array('nome'=>'leão','preco'=>' 20000','descricao'=>' Um simples leão','imagem'=>'leão.png'),
-                 2=> array('nome'=>'baleia','preco'=>' 50000','descricao'=>' Uma simples baleia','imagem'=>'baleia.png'),
-                 3=> array('nome'=>'macaco','preco'=>' 70000','descricao'=>' Um simples macaco','imagem'=>'macaco.png'),
-                 4=> array('nome'=>'cachorro','preco'=>' 20000','descricao'=>' Um simples cachorro','imagem'=>'cachorro.png'),
-                 5=> array('nome'=>'vaca','preco'=>' 30000','descricao'=>' Uma simples vaca','imagem'=>'vaca.png'),
-                 6=> array('nome'=>'rato','preco'=>' 50000','descricao'=>' Um simples rato','imagem'=>'rato.png'),
-                 7=> array('nome'=>'gavião','preco'=>' 35000','descricao'=>' Um simples gavião','imagem'=>'gavião.png'),
-                 8=> array('nome'=>'avestruz','preco'=>' 30000','descricao'=>' Um simples avestruz','imagem'=>'avestruz.png'),
-                 9=> array('nome'=>'anta','preco'=>' 30000','descricao'=>' Uma simples anta','imagem'=>'anta.png'),
-                 10=> array('nome'=>'falcão','preco'=>' 30000','descricao'=>' Um simples falcão','imagem'=>'falcão.jpg'),
-                
 
-
-
+$produtos = array(
+   0 => array('nome' => 'motorista', 'preco' => 'R$5.000,00', 'descricao' => 'macaquinho com chapéu preto', 'imagem' => 'nft0.jpg'),
+   1 => array('nome' => 'rei', 'preco' => 'R$3.000,00', 'descricao' => 'macaquinho rei colorido', 'imagem' => 'nft1.jpg'),
+   2 => array('nome' => 'jorge curioso', 'preco' => 'R$4.500,00', 'descricao' => 'macaquinho pescador', 'imagem' => 'nft2.jpg'),
+   3 => array('nome' => 'azuleto', 'preco' => 'R$1.500,00', 'descricao' => 'macaquinho chato azul', 'imagem' => 'nft3.jpg'),
+   4 => array('nome' => 'capitão', 'preco' => 'R$12.000,00', 'descricao' => 'macaquinho capitão lazer nos olhos', 'imagem' => 'nft4.jpg'),
+   5 => array('nome' => 'americano', 'preco' => 'R$3.000,00', 'descricao' => 'macaquinho radical motoqueiro', 'imagem' => 'nft5.jpg'),
+   6 => array('nome' => 'robô', 'preco' => 'R$5.500,00', 'descricao' => 'macaquinho sem olho robótico', 'imagem' => 'nft6.jpg'),
+   7 => array('nome' => 'pink', 'preco' => 'R$11.000,00', 'descricao' => 'macaquinho rosa de chapéu', 'imagem' => 'nft7.jpg'),
+   8 => array('nome' => 'cowboy', 'preco' => 'R$40.000,00', 'descricao' => 'macaquinho de rodeio', 'imagem' => 'nft8.jpg'),
+   9 => array('nome' => 'punk', 'preco' => 'R$3.000,00', 'descricao' => 'macaquinho encrenqueiro', 'imagem' => 'nft9.jpg'),
+   10 => array('nome' => 'piloto', 'preco' => 'R$7.000,00', 'descricao' => 'macaquinho triste de vestido', 'imagem' => 'nft10.jpg'),
+   11 => array('nome' => 'torcedor', 'preco' => 'R$9.000,00', 'descricao' => 'macaquinho de juliete torcendo pro palmeiras', 'imagem' => 'nft11.jpg'),
+   12 => array('nome' => 'lixo', 'preco' => 'R$21.000,00', 'descricao' => 'macaquinho feliz coberto de coisas desconhecidas', 'imagem' => 'nft12.jpg'),
+   13 => array('nome' => 'estiloso', 'preco' => 'R$5.000,00', 'descricao' => 'macaquinho com brinco de midia hetero top', 'imagem' => 'nft13.jpg'),
+   14 => array('nome' => 'futurista', 'preco' => 'R$98.000,00', 'descricao' => 'macaquinho de terno no metaverso', 'imagem' => 'nft14.jpg'),
+   15 => array('nome' => 'haviano', 'preco' => 'R$4.000,00', 'descricao' => 'macaquinho entregador de pizza comendo pizza no havai', 'imagem' => 'nft15.jpg'),
+   16 => array('nome' => 'one directioner', 'preco' => 'R$34.000,00', 'descricao' => 'macaquinho descolado que gosta de 1d', 'imagem' => 'nft16.jpg'),
+   17 => array('nome' => 'outro', 'preco' => 'R$9.000,00', 'descricao' => 'macaquinho do cruzeiro? com um apito', 'imagem' => 'nft17.jpg'),
+   18 => array('nome' => 'dente azul', 'preco' => 'R$6.900,00', 'descricao' => 'macaquinho rindo com dentes de diamante', 'imagem' => 'nft18.jpg'),
+   19 => array('nome' => 'gelado', 'preco' => 'R$44.000,00', 'descricao' => 'macaquinho rei do artico', 'imagem' => 'nft19.jpg'),
+   20 => array('nome' => 'jackson', 'preco' => 'R$7.300,00', 'descricao' => 'macaquinho com filtro azul dancarino', 'imagem' => 'nft20.jpg'),
+   21 => array('nome' => 'style', 'preco' => 'R$1.000,00', 'descricao' => 'macaquinho com o moletom da supreme', 'imagem' => 'nft21.jpg'),
+   22 => array('nome' => 'onça', 'preco' => 'R$22.000,00', 'descricao' => 'macaquinho social com touca', 'imagem' => 'nft22.jpg'),
+   23 => array('nome' => 'adidas', 'preco' => 'R$13.000,00', 'descricao' => 'macaquinho repetido mas com fundo diferente', 'imagem' => 'nft23.jpg'),
+   24 => array('nome' => 'albino', 'preco' => 'R$54.000,00', 'descricao' => 'macaquinho bossass da antartica', 'imagem' => 'nft24.jpg'),
+   25 => array('nome' => 'corinthiano', 'preco' => 'R$4.000,00', 'descricao' => 'macaquinho do corinthians', 'imagem' => 'nft25.jpg'),
+   26 => array('nome' => 'pirata azul', 'preco' => 'R$30.000,00', 'descricao' => 'macaquinho com tapaolho blue', 'imagem' => 'nft26.jpg'),
+   27 => array('nome' => 'baby', 'preco' => 'R$13.000,00', 'descricao' => 'macaquinho bebe', 'imagem' => 'nft27.jpg'),
+   28 => array('nome' => 'rainbow teeth', 'preco' => 'R$17.000,00', 'descricao' => 'macaquinho sorridente legal', 'imagem' => 'nft28.jpg'),
+   29 => array('nome' => 'chapado em drugs', 'preco' => 'R$61.000,00', 'descricao' => 'macaquinho louco', 'imagem' => 'nft29.png'),
 );
 
 ?>

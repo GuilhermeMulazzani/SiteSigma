@@ -1,37 +1,11 @@
 <?php
 // include do footer
+include_once './includes/_banco.php';
 include_once './includes/_dados.php';
 include_once './includes/_head.php';
 include_once './includes/_header.php';
-
 ?>
-
-
-<div id="inputs-for-contacts" class="container">
-<h1 id="contato">Contato</h1>
-
-<form action="./contato.php" method="post">
-  <div class="form-group">
-    <label for="formGroupExampleInput">Nome Completo</label>
-    <input type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome Completo">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">E-mail</label>
-    <input type="text" class="form-control" name="txtEmail" id="txtEmail" placeholder="E-mail">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Telefone</label>
-    <input type="text" class="form-control" name="txtTelefone" id="txtTelefone" placeholder="Telefone">
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Mensagem</label>
-    <input type="text" class="form-control"  name="txtMensagem" id="txtMensagem">
-  </div>
- 
-  <input id="cadastrar" type="submit" value="Cadastrar">
-</form>
-</div>
-
+<div class="m-5" id="contato">
 
 <?php
 if (isset ( $_POST['txtNome']) ) {
@@ -40,8 +14,34 @@ if (isset ( $_POST['txtNome']) ) {
     $email = $_POST['txtEmail'];
     $telefone = $_POST['txtTelefone'];
     $mensagem = $_POST['txtMensagem'];
-    echo $nome. "<br>". $email."<br>". $telefone."<br>". $mensagem;
+ echo $nome. "<br>". $email."<br>". $telefone."<br>". $mensagem;
 }
+?>
 
+<h1>Contato</h1>
+<form action="./contato.php" method="post">
+    <ul style=" list-style: none;">
+        <li>
+        <label for="txtNome">Nome Completo</label>
+        <input type="text" name="txtNome" id="txtNome">
+        </li>
+        <li>
+        <label for="txtEmail">E-mail</label>
+        <input type="text" name="txtEmail" id="txtEmail">
+        </li>
+        <li>
+        <label for="txtTelefone">Telefone</label>
+        <input type="text" name="txtTelefone" id="txtTelefone">
+        </li>
+        <li>
+        <label for="txtMensagem">Mensagem</label>
+        <input type="text" name="txtMensagem" id="txtMensagem">
+        </li>
+        <input type="submit" value="Cadastrar">
+    </ul>
+</form>
+</div>
+<?php
+// include do footer
 include_once './includes/_footer.php';
 ?>
