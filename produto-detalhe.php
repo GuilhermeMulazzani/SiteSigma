@@ -1,26 +1,39 @@
+
+
 <?php
-include_once './includes/_banco.php';
+// include do footer
 include_once './includes/_dados.php';
 include_once './includes/_head.php';
 include_once './includes/_header.php';
-$id = $_GET['id'];
-$tipo = $_GET['tipo'];
-
 ?>
-<div class="container" style="margin-top:3cm; margin-left:11cm">
-<div class="row">
-<div class="col" style="padding: 0px">
-<img style='width: 400px; height: 350px;' src='./content/<?php echo $produtos[$id]['imagem'];?>'>
-<h1> Nome: <?php echo $produtos[$id]['nome'];?></h1>
-<h2> Preço: <?php echo $produtos[$id]['preco'];?></h2>
-<p> Descrição: <?php echo $produtos[$id]['descricao'];?></p>
+<div class"container">
+<h1>Produto Detalhe</h1>
 </div>
-</div>
-</div>
-<div class="row">
-    <div style="margin-left: 9cm;" class="col"><a href="index.php" class="btn btn-primary">Voltar</a></div>
-    <div class="col"><a href="contato.php" class="btn btn-primary">Comprar</a></div>
-</div>
+
 <?php
+$id= $_GET [ 'id' ];
+$tipo=$_GET['tipo'];
+?>
+<div id="detalhe" class="container">
+    <div id="produto-detalhe">
+<h3><?php echo $produtos[$id]['nome'] ?></h1>
+<img  src="./content/<?php echo $produtos[$id]['imagem']   ?>" alt="Imagem de capa do card">
+<div class="card-body">
+    
+    <p class="card-text"><?php echo $produtos[$id]['descricao'];?></p>
+    <h4>R$ <?php  echo $produtos[$id]['preco']; ?></h4>
+    <div class="row">
+        <div class="col"><button class="btn btn-danger"><a href="index.php">voltar</a></button> </div>
+        <div class="col"> <button class="btn btn-success"><a href="#">comprar</a></button> </div>
+        
+    <div>
+    
+  </div>
+  </div>
+  </div> 
+
+
+<?php
+// include do footer
 include_once './includes/_footer.php';
 ?>
