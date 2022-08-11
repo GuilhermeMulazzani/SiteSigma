@@ -31,6 +31,15 @@ switch ($acao){
         if (!isset($_POST['id']) || empty($_POST['id'])) {
             //comando SQL do banco de dados que inclui um registro
             $sql = "INSERT INTO `categorias`(`Nome`, `Descricao`)VALUES('".$nome."','".$descricao."')";
-        }        
-?>
+        }else{
+            // comando SQL do banco de dados que atualiza um registro
+            $sql = "UPDATE `categorias` SET `Nome`='".$nome"', `Descricao`'".$descricao."' WHERE `CategoriasID`='".$id."' ";
+        }
 
+        // executa o comando de excluir
+        mysqli_query($conexao, $sql);
+
+        // redireciona a pagina
+        header('location: ./categoria-lista.php');
+        break;
+    }
