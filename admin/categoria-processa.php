@@ -27,6 +27,17 @@ switch ($acao){
         $nome = $_POST['nome'];
         $descricao = $_POST['descricao'];
 
+        if ($_FILES['foto']['size'] > 0){
+            //pasta que armazena o arquivo
+            $uploaddir = '.../imagens/categorias/';
+            $extensao = pathinfo ($_FILES['foto']['name'], PATHINFO_EXTENSION);
+            $nomearquivo = 'categorias-'.$id.'-'.rand().'.'.$extensao;
+            $uploadfile = $uploaddir . $nomearquivo;
+            move_uploaded_file($_FILES['foto']['tmp_name'], $uploadfile);
+        }else{
+            $nomearquivo = $_POST['imagem'];
+        }
+
         //monta o sql conforme informa o id
         if (!isset($_POST['id']) || empty($_POST['id'])) {
             //comando SQL do banco de dados que inclui um registro
