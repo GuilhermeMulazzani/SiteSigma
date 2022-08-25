@@ -1,7 +1,7 @@
 <?php
 $produtos= array(
     0=> array('nome'=>'Cavaliers Shirt','preco'=>' 312,00','descricao'=>' The Best Ever','imagem'=>'cavaliersregata.webp'),
-    1=> array('nome'=>'Lakers Shirt','preco'=>' 350,00','descricao'=>'The Terror of Basket','imagem'=>'lakersregata.jfif'),
+    1=> array('nome'=>'BANANA Shirt','preco'=>' 350,00','descricao'=>'The Terror of Basket','imagem'=>'lakersregata.jfif'),
     2=> array('nome'=>'Warriors Shirt','preco'=>' 299,99','descricao'=>' The God','imagem'=>'warriorsregata.jpg'),
     3=> array('nome'=>'Cavaliers Polo-Shirt','preco'=>' 429,99','descricao'=>'Social Best Ever','imagem'=>'cavalierspolo.webp'),
     4=> array('nome'=>'Lakers Polo-Shirt','preco'=>' 359,99','descricao'=>'Social Terror of Basket','imagem'=>'lakerspolo.webp'),
