@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Jul-2022 às 17:31
+-- Tempo de geração: 18-Ago-2022 às 16:54
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 7.3.27
 
@@ -24,11 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `adm`
+--
+
+CREATE TABLE `adm` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `Ativo` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `adm`
+--
+
+INSERT INTO `adm` (`id`, `usuario`, `senha`, `Ativo`) VALUES
+(1, 'rubim', '1234', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `categorias`
 --
 
 CREATE TABLE `categorias` (
-  `CateoriaID` int(11) NOT NULL,
+  `CategoriaID` int(11) NOT NULL,
   `Nome` varchar(100) NOT NULL,
   `Ativo` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,17 +57,31 @@ CREATE TABLE `categorias` (
 -- Extraindo dados da tabela `categorias`
 --
 
-INSERT INTO `categorias` (`CateoriaID`, `Nome`, `Ativo`) VALUES
-(1, 'Alan Patrick', 1),
-(2, 'Neymar', 1),
-(3, 'Wanderson', 1),
-(4, 'S.C. Internacional', 1),
-(5, 'Messi', 1),
-(6, 'Vasco da Gama', 1),
-(7, 'Brasil', 1),
-(8, 'Futbol', 1),
-(9, 'Neymar Jr 90\'', 1),
-(10, 'Messi 89\'', 1);
+INSERT INTO `categorias` (`CategoriaID`, `Nome`, `Ativo`) VALUES
+(1, 'Animais', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contato`
+--
+
+CREATE TABLE `contato` (
+  `ContatoID` int(11) NOT NULL,
+  `Nome` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Telefone` varchar(15) NOT NULL,
+  `Mensagem` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`ContatoID`, `Nome`, `Email`, `Telefone`, `Mensagem`) VALUES
+(3, 'Rubim', 'teste@gmail.com', '992139219', 'oi '),
+(4, 'Sandro', 'sandromartinscosta@gmail.com', '519999999999', 'oie'),
+(5, 'Rubim', 'teste@gmail.com', '992139219', 'dsadsadsa');
 
 -- --------------------------------------------------------
 
@@ -70,27 +104,34 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`ProdutoID`, `Nome`, `Descricao`, `Imagem`, `Preco`, `CategoriaID`, `Ativo`) VALUES
-(1, 'Allan Patrick', ' Classe', 'Alan Patrick.jpg', 16, 1, 1),
-(2, 'Neymar', ' Coringa', 'Neymar.jpg', 20, 1, 1),
-(3, 'Wanderson', ' Craque', 'Wanderson.webp', 50, 1, 1),
-(4, 'S.C. Internacional', ' O maior de TODOS', 'Internacional.png', 70, 1, 1),
-(5, 'Messi', ' E.T. melhor da história', 'Messi.webp', 20000, 1, 1),
-(6, 'Vasco da Gama', ' Gigante da colina', 'Vasco da Gama.png', 30000, 1, 1),
-(7, 'Brasil', ' Hexa 2022', 'Brasil.webp', 50000, 1, 1),
-(8, 'Futebol', ' Melhor criação do homem', 'Futebol.webp', 35000, 1, 1),
-(9, 'Neymar aos 90', ' Decisivo', 'Neymar 90.webp', 30000, 1, 1),
-(10, 'Messi aos 90', ' Decisivo', 'Messi aos 90.webp', 30000, 1, 1),
-(11, 'HEXA', ' Brasil hexa p0rr4', 'Hexa.jpg', 30000, 1, 1);
+(1, 'Capivara Risonha', 'KKKKKKKKKKKK', 'https://w7.pngwing.com/pngs/1011/560/png-transparent-capybara-games-sticker-telegram-others-mammal-carnivoran-hand.png', 1000, 1, 1),
+(2, 'Capivara Doente', 'ai ai to dodói ', 'https://img2.gratispng.com/20180428/wwe/kisspng-capybara-telegram-sticker-snout-clip-art-5ae48ffd0bc572.1326559315249285090482.jpg', 2000, 1, 1),
+(3, 'Capivara Gulosa', 'Fominha', 'https://e7.pngegg.com/pngimages/221/495/png-clipart-capybara-telegram-sticker-messaging-apps-others-mammal-food.png', 300, 1, 1),
+(4, 'Capivara Maromba ', 'WHEY', 'https://w7.pngwing.com/pngs/519/694/png-transparent-capybara-sticker-telegram-bear-others-mammal-food-cat-like-mammal.png', 3000, 1, 1),
+(5, 'Capivara Assustada', 'UI MEDO', 'https://w7.pngwing.com/pngs/843/194/png-transparent-sticker-capybara-telegram-capybara-mammal-carnivoran-dog-like-mammal.png', 400, 1, 1),
+(6, 'Capivara Nerd', 'UI LIVROS', 'https://w7.pngwing.com/pngs/696/1020/png-transparent-capybara-sticker-telegram-mammal-capybara-mammal-food-dog-like-mammal.png', 10000, 1, 1);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
+-- Índices para tabela `adm`
+--
+ALTER TABLE `adm`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `categorias`
 --
 ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`CateoriaID`);
+  ADD PRIMARY KEY (`CategoriaID`);
+
+--
+-- Índices para tabela `contato`
+--
+ALTER TABLE `contato`
+  ADD PRIMARY KEY (`ContatoID`);
 
 --
 -- Índices para tabela `produtos`
@@ -103,16 +144,28 @@ ALTER TABLE `produtos`
 --
 
 --
+-- AUTO_INCREMENT de tabela `adm`
+--
+ALTER TABLE `adm`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `CateoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT de tabela `contato`
+--
+ALTER TABLE `contato`
+  MODIFY `ContatoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

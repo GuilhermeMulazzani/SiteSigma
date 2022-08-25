@@ -4,27 +4,23 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="produtos.php">Produtos</a>
+                    <a class="nav-link" href="../produtos.php">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.php">Contato</a>
+                    <a class="nav-link" href="../contato.php">Contato</a>
                 </li>
-                <?php 
-                session_start();
-                @$logado = $_SESSION['logado']; 
-                if($logado == 'logado'):
-                ?>
+            <?php if($logado = 'logado'): ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/logout.php">Logout</a>
+                    <a class="nav-link" href="logout.php">Logout</a>
                 </li>
-                <?php else:?>
+            <?php else:?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin/login.php">Login</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
-                <?php endif ?>
+            <?php endif ?>
             </ul>
         </div>
     </nav>

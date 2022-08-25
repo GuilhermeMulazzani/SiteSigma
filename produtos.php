@@ -1,33 +1,32 @@
 <?php
 // include do footer
-include_once './includes/_dados.php';
 include_once './includes/_head.php';
 include_once './includes/_header.php';
+include_once './includes/Banco.php';
+
+$sql = "SELECT * FROM produtos WHERE Ativo = 1";
+$res = mysqli_query($conn,$sql);
 ?>
 
-<body>
-  <div class="container">
-    <h2>produtos</h2>
-  <div class="row">
-  <?php
-  foreach ($produtos as $key=>$value) { 
-    # code...
-  
-  ?>
-  <div id="animais" class="card mt-5"  >
-  <img class="card-img-top" src="./content/<?php echo $value['imagem']   ?>" alt="Imagem de capa do card">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $value['nome']; ?></h5>
-    <p class="card-text"><?php echo $value['descricao'];?></p>
-    <a href="produto-detalhe.php?id=<?php echo$value ?>" class="btn btn-primary">Visitar</a>
-  </div>
-</div>
-<?php
-  }
-  ?>
+<div class="container mt-5">
+    <div class="row">
+        <?php foreach($res as $produto):?>
+            <div class="col-sm mb-5">
+            <a href="produto-detalhe.php?id=<?=$produto['ProdutoID']?>">
+                    <div class="card" style="width: 18rem;">
+                        <img src=" <?= $produto['Imagem']?> " class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?= $produto['Nome']?> </h5>
+                            <p class="card-text"> <?= $produto['Preco']?> </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <?php endforeach ?>
     </div>
-  </div>
 </div>
+
+
 
 
 <?php
